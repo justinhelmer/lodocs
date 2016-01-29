@@ -1,7 +1,7 @@
 {
   "name": "lodocs",
   "version": "0.1.0",
-  "description": "CLI for managing lodocs.github.io",
+  "description": "CLI for managing the Lodash website",
   "keywords": [
     "lodash",
     "lodocs",
