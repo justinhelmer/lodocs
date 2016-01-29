@@ -5,6 +5,7 @@
   var _ = require('lodash');
   var chalk = require('chalk');
   var gulp = require('gulp');
+  var path = require('path');
   var program = require('commander');
   var fork = require('../lib/fork');
   var margin = _.pad('', 19);
@@ -39,11 +40,19 @@
   require('../lib/exit')();
 
   function jekyll() {
+    var lodocsServe = path.resolve(__dirname, './lodocs-serve.js');
     var serve = program.serve && env === 'development';
-    var command = serve ? 'lodocs' : 'jekyll';
+    var args, command;
+
+    if (serve) {
+      command = 'node';
+      args = [lodocsServe]; // `serve` handles the building as well
+    } else {
+      command = 'jekyll';
+      args = ['build'];
+    }
 
     if (program.verbose && env === 'production') {
-      // @jdalton potential lodash optimization
       _.each(['serve', 'port', 'watch'], function(option) {
         if (program[option]) {
           warnOptionIsIgnored(option, '[env] is `production`');
@@ -54,8 +63,6 @@
     if (!serve && env === 'development') {
       warnIfOptionIsIgnored('port', 'serve', true);
     }
-
-    var args = serve ? ['serve'] : ['build']; // `serve` handles the building as well
 
     if (program.watch) {
       if (serve) {
