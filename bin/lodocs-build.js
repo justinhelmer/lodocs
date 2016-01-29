@@ -37,7 +37,6 @@
   console.log();
   gulp.start('build');
   gulp.on('stop', jekyll);
-  require('../lib/exit')();
 
   function jekyll() {
     var lodocsServe = path.resolve(__dirname, './lodocs-serve.js');
