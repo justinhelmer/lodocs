@@ -21,7 +21,5 @@
 
         //_.each(response.body, prepare);
       });
-
-  require('../lib/exit')();
 })();
 

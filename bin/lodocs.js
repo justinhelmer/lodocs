@@ -22,7 +22,5 @@
     console.error('\n  error: unknown command: `' + process.argv[2] + '`\n');
     process.exit(1);
   }
-
-  require('../lib/exit.js')();
 })();
 

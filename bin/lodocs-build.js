@@ -7,7 +7,7 @@
   var gulp = require('gulp');
   var path = require('path');
   var program = require('commander');
-  var fork = require('../lib/fork');
+  var spork = require('node-spork');
   var margin = _.pad('', 19);
   var open = require('../lib/open');
 
@@ -86,7 +86,7 @@
       args.push('--verbose');
     }
 
-    fork(command, args, {env: {NODE_ENV: env}, exit: true});
+    spork(command, args, {env: {NODE_ENV: env}, exit: true});
   }
 
   /**

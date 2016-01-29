@@ -3,7 +3,7 @@
   'use strict';
 
   var program = require('commander');
-  var fork = require('../lib/fork');
+  var spork = require('node-spork');
   var open = require('../lib/open');
 
   program
@@ -23,8 +23,6 @@
     args.push('--verbose');
   }
 
-  fork('jekyll', args);
-
-  require('../lib/exit')();
+  spork('jekyll', args);
 })();
 
