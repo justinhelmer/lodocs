@@ -8,12 +8,20 @@
     "documentation"
   ],
   "homepage": "http://justinhelmer.github.io/lodash.github.io/",
+  "bugs": {
+    "url": "https://github.com/justinhelmer/lodocs/issues",
+    "email": "jhelmer25@gmail.com"
+  },
+  "licence": "MIT",
   "author": "Justin Helmer jhelmer25@gmail.com",
   "files": [
     "bin",
     "lib",
-    "install.sh",
-    "gulpfile.js"
+    ".gitignore",
+    ".jscsrc",
+    ".jshintrc",
+    "gulpfile.js",
+    "install.sh"
   ],
   "bin": {
     "lodocs": "./bin/lodocs.js"
@@ -38,6 +46,5 @@
   },
   "engines": {
     "node": ">=0.12"
-  },
-  "private": true
+  }
 }
