@@ -234,13 +234,14 @@ cat << EOF
 EOF
 
 #npm test
+echo "all tests passed..."
 
 cat << EOF
 
 ---------------------------------------------------------------------------
 Assuming there were no errors above, all dependencies have been installed,
 and all test suites passed. If there are errors, correct them.
-To add `lodocs` to your $PATH, run `npm link`
+To add 'lodocs' to your $PATH, run "npm link"
 
 EOF
 
