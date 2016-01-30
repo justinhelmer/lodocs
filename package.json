@@ -37,7 +37,7 @@
     "yamljs": "^0.2.4"
   },
   "engines": {
-    "node": "*"
+    "node": ">=0.12"
   },
   "private": true
 }
