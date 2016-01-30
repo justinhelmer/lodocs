@@ -24,5 +24,6 @@
   }
 
   spork('jekyll', args);
+  require('node-clean-exit')({verbose: program.verbose});
 })();
 
