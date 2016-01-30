@@ -28,6 +28,7 @@
 
   var env = program.args[0] || process.env.NODE_ENV;
   env = env || 'development';
+  var serve = program.serve && env === 'development';
 
   if (!_.includes(['development', 'production'], env)) {
     console.error('\n  error: unknown [env]: `' + env + '`');
@@ -37,20 +38,36 @@
   console.log();
   gulp.start('build');
   gulp.on('stop', jekyll);
+  gulp.on('err', function(reason) {
+    if (!program.quiet) {
+      console.error(chalk.red(reason.err.message));
+    }
+
+    process.exit(1);
+  });
 
   function jekyll() {
-    var lodocsServe = path.resolve(__dirname, './lodocs-serve.js');
-    var serve = program.serve && env === 'development';
     var args, command;
 
     if (serve) {
       command = 'node';
-      args = [lodocsServe]; // `serve` handles the building as well
+      args = [path.resolve(__dirname, './lodocs-serve.js')]; // `serve` handles the building as well
     } else {
       command = 'jekyll';
       args = ['build'];
     }
 
+    prepareArgs(args);
+
+    var port = program.port ? program.port : 4000;
+    if (serve && program.open) {
+      open(program.open, '', port);
+    }
+
+    spork(command, args, {env: {NODE_ENV: env}, exit: true});
+  }
+
+  function prepareArgs(args) {
     if (program.verbose && env === 'production') {
       _.each(['serve', 'port', 'watch'], function(option) {
         if (program[option]) {
@@ -71,21 +88,13 @@
       }
     }
 
-    var port = 4000;
     if (serve && program.port) {
       args.push(program.port);
-      port = program.port;
-    }
-
-    if (serve && program.open) {
-      open(program.open, '', port);
     }
 
     if (program.verbose && !program.quiet) {
       args.push('--verbose');
     }
-
-    spork(command, args, {env: {NODE_ENV: env}, exit: true});
   }
 
   /**
