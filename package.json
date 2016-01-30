@@ -1,6 +1,6 @@
 {
   "name": "lodocs",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "CLI for managing the Lodash website",
   "keywords": [
     "lodash",
@@ -37,7 +37,7 @@
     "gulp-jshint": "^2.0.0",
     "jshint": "^2.9.1",
     "lodash": "^4.0.1",
-    "node-clean-exit": "^0.1.8",
+    "node-clean-exit": "^0.2.0",
     "node-spork": "^0.1.5",
     "normalize.css": "^3.0.3",
     "opn": "^4.0.0",
