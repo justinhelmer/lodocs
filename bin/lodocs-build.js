@@ -4,6 +4,7 @@
 
   var _ = require('lodash');
   var chalk = require('chalk');
+  var cjsErr = require('commander.js-error');
   var gulp = require('gulp');
   var path = require('path');
   var program = require('commander');
@@ -31,7 +32,7 @@
   var serve = program.serve && env === 'development';
 
   if (!_.includes(['development', 'production'], env)) {
-    console.error('\n  error: unknown [env]: `' + env + '`');
+    cjsErr('unknown [env]:', env);
     process.exit(1);
   }
 
