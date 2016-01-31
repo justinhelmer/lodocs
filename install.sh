@@ -63,10 +63,14 @@ skipping any steps that have not changed since it was last run.
     - The following tools will be installed globally, or if already installed,
       will be updated to match the versions required by the project:
 
-              * gulp     http://gulpjs.com/ (for automating common operations)
-              * bundler  http://bundler.io/ (for installing gems)
-              * brew     http://brew.sh (only if Ruby 2.1.4 is not installed)
-              * rbenv    http://rbenv.org/ (only if Ruby 2.1.4 is not installed)
+              * gulp       http://gulpjs.com/ (for build/deploy automation)
+              * bundler    http://bundler.io/ (for installing gems)
+
+    - If Ruby 2.1.4 is not installed, the following packages are also installed
+      globally, to manage ruby versions:
+              * brew       http://brew.sh
+              * rbenv      http://rbenv.org/
+              * ruby-build https://github.com/rbenv/ruby-build
 
     - $profile
           - Will be updated to include the \$PATH of 'brew', if installed during
@@ -167,6 +171,11 @@ if $(! type -P rbenv &>/dev/null); then
   fi
 
   brew install rbenv
+
+  if $(! type -P ruby-build &>/dev/null); then
+    brew install ruby-build
+  fi
+
   install_ruby
   install_bundle
 else
