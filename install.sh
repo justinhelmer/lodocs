@@ -171,7 +171,11 @@ if $(! type -P rbenv &>/dev/null); then
   fi
 
   brew install rbenv
-  brew install ruby-build
+
+  if $(! type -P ruby-build &>/dev/null); then
+    brew install ruby-build
+  fi
+
   install_ruby
   install_bundle
 else
