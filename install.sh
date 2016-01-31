@@ -67,6 +67,7 @@ skipping any steps that have not changed since it was last run.
               * bundler  http://bundler.io/ (for installing gems)
               * brew     http://brew.sh (only if Ruby 2.1.4 is not installed)
               * rbenv    http://rbenv.org/ (only if Ruby 2.1.4 is not installed)
+              * ruby-build https://github.com/rbenv/ruby-build
 
     - $profile
           - Will be updated to include the \$PATH of 'brew', if installed during
@@ -167,6 +168,7 @@ if $(! type -P rbenv &>/dev/null); then
   fi
 
   brew install rbenv
+  brew install ruby-build
   install_ruby
   install_bundle
 else
