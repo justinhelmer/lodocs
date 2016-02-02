@@ -3,7 +3,7 @@
   'use strict';
 
   var program = require('commander');
-  var spork = require('node-spork');
+  var spork = require('spork');
   var open = require('../lib/open');
 
   program

@@ -8,7 +8,7 @@
   var gulp = require('gulp');
   var path = require('path');
   var program = require('commander');
-  var spork = require('node-spork');
+  var spork = require('spork');
   var margin = _.pad('', 19);
   var open = require('../lib/open');
 

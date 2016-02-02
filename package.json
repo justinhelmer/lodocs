@@ -40,10 +40,10 @@
     "jshint": "^2.9.1",
     "lodash": "^4.1.0",
     "node-clean-exit": "^0.2.1",
-    "node-spork": "^0.2.1",
     "normalize.css": "^3.0.3",
     "opn": "^4.0.0",
     "pluralize": "^1.2.1",
+    "spork": "^0.3.1",
     "unirest": "^0.4.2",
     "yamljs": "^0.2.4"
   },

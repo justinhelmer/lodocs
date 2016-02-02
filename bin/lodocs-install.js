@@ -2,6 +2,6 @@
 (function() {
   'use strict';
 
-  require('node-spork')(require('path').resolve(__dirname, '../install.sh'), [], {exit: true});
+  require('spork')(require('path').resolve(__dirname, '../install.sh'), [], {exit: true});
 })();
 
