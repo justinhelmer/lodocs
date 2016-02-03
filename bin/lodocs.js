@@ -14,7 +14,7 @@
       .command('install', 'install dependencies necessary to use lodocs')
       .command('build [env]', 'build the app for the correponding [env]')
       .command('serve [port]', 'serve the app locally on the corresponding [port]')
-      .command('release', 'download releases, generate documentation, build site, deploy')
+      .command('release', 'download releases, generate documentation, run test suite, deploy')
       .parse(process.argv);
 
   // @TODO is there a better way to do this?
