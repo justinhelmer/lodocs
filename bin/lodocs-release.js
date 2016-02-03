@@ -15,16 +15,12 @@
       .parse(process.argv);
 
   var options = {
-    paths: {
-      docs: path.resolve(__dirname, '../docs'),
-      jsdoc: path.resolve(__dirname, '../node_modules/.bin/jsdoc'),
-      releases: path.resolve(__dirname, '../releases')
-    },
+    docs: path.resolve(__dirname, '../docs'),
     quiet: program.quiet,
     verbose: program.verbose
   };
 
-  grm(program.args[0] || 'suite', options)
+  grm('release', options)
       .then(function() {
         console.log('\n' + chalk.green('Done with everything.'));
         process.exit();
