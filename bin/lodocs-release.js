@@ -6,9 +6,7 @@
   var chalk = require('chalk');
   var cjsErr = require('commander.js-error');
   var grm = require('gh-release-manager');
-  var path = require('path');
   var program = require('commander');
-  var open = require('../lib/open');
 
   program
       .description('Description:\n\n    Download releases, generate documentation, build site, deploy.')
@@ -28,17 +26,13 @@
       })
       .catch(function(err) {
         if (!program.quiet) {
-          cjsErr(err.message);
-        }
-
-        if (program.verbose) {
-          console.trace();
+          cjsErr({verbose: program.verbose}, err.message);
         }
 
         process.exit(1);
       })
       .done();
 
-  require('node-clean-exit')({verbose: program.verbose});
+  require('node-clean-exit')({quiet: program.quiet, verbose: program.verbose});
 })();
 
