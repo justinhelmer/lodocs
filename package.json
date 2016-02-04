@@ -1,6 +1,6 @@
 {
   "name": "lodocs",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "CLI for managing the Lodash website",
   "keywords": [
     "lodash",
@@ -20,6 +20,7 @@
     ".gitignore",
     ".jscsrc",
     ".jshintrc",
+    "Gemfile",
     "gulpfile.js",
     "install.sh"
   ],
