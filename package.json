@@ -1,6 +1,6 @@
 {
   "name": "lodocs",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "CLI for managing the Lodash website",
   "keywords": [
     "lodash",
