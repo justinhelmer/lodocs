@@ -22,9 +22,6 @@
           '* assumed if `--serve` is set\n' + margin + '* ignored unless [env] is `development`')
       .parse(process.argv);
 
-  var environment = program.args[0] || process.env.NODE_ENV;
-  environment = environment || 'development';
-
   var options = {
     open: program.open,
     port: program.port,
@@ -34,7 +31,7 @@
     watch: program.watch
   };
 
-  build(environment, options)
+  build(options)
       .then(function() {
         console.log('\n' + chalk.green('Done with everything.'));
         process.exit();

@@ -4,15 +4,25 @@
   var gulp = require('gulp');
   var jscs = require('gulp-jscs');
   var jshint = require('gulp-jshint');
-  var buildPath = '_site';
+  var path = require('path');
 
-  gulp.task('build', ['lint', 'copy']);
+  // All task definitions
+  gulp.task('build', ['copyCSS']);
   gulp.task('lint', lint);
-  gulp.task('copy', ['lint'], copy);
+  gulp.task('copyCSS', ['lint'], copyCSS);
 
-  function copy() {
-    var files = ['node_modules/normalize.css/normalize.css'];
-    gulp.src(files).pipe(gulp.dest(buildPath + '/css'));
+  // Set up the build path relative to the working directory
+  var buildPath = path.resolve('_site');
+
+  // Change working directory to the location of the gulpfile, else gulp will not work correctly
+  process.chdir(path.resolve(__dirname));
+
+  function copyCSS() {
+    var files = [
+      'node_modules/normalize.css/normalize.css'
+    ];
+
+    return gulp.src(files).pipe(gulp.dest(buildPath + '/css'));
   }
 
   function lint() {
