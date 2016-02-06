@@ -9,7 +9,7 @@
   gulp.task('copyCSS', copyCSS);
 
   // Set up the build path relative to the working directory
-  var buildPath = path.resolve('_site');
+  var buildPath = path.resolve('build');
 
   // Change working directory to the location of the gulpfile, else gulp will not work correctly
   process.chdir(path.resolve(__dirname));
