@@ -1,6 +1,6 @@
 {
   "name": "lodocs",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "CLI for managing the Lodash website",
   "keywords": [
     "lodash",
@@ -17,9 +17,6 @@
   "files": [
     "bin",
     "lib",
-    ".gitignore",
-    ".jscsrc",
-    ".jshintrc",
     "Gemfile",
     "gulpfile.js",
     "install.sh"
@@ -29,24 +26,18 @@
   },
   "repository": "justinhelmer/lodocs",
   "dependencies": {
-    "bluebird": "^3.2.1",
+    "bluebird": "^3.2.2",
     "chalk": "^1.1.1",
     "commander": "^2.9.0",
     "commander.js-error": "^1.1.0",
-    "forever-monitor": "^1.7.0",
-    "gh-release-manager": "^0.3.9",
+    "gh-release-manager": "^0.4.0",
     "gulp": "^3.9.0",
-    "gulp-jscs": "^3.0.2",
-    "gulp-jscs-stylish": "^1.3.0",
-    "gulp-jshint": "^2.0.0",
-    "jshint": "^2.9.1",
     "lodash": "^4.2.1",
     "node-clean-exit": "^0.2.1",
     "normalize.css": "^3.0.3",
     "opn": "^4.0.0",
     "pluralize": "^1.2.1",
     "spork": "^0.3.1",
-    "unirest": "^0.4.2",
     "yamljs": "^0.2.4"
   },
   "engines": {
