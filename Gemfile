@@ -5,5 +5,5 @@ gem 'jekyll-redirect-from'
 
 group :test, :development do
   gem 'jekyll'
-  gem 'kramdown'
+  gem 'redcarpet'
 end
