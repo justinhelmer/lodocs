@@ -5,7 +5,7 @@
   var program = require('commander');
 
   program
-      .version('0.4.1')
+      .version('0.4.2')
       .description('Description:\n\n    ' + 'Build & serve the application locally for different environments.\n\n    ' +
           'If [env] is not supplied, the environment will be assumed based on\n    ' + 'the active node environment.\n\n    ' +
           'If the $NODE_ENV environment variable does not exist,\n    ' + 'it will use `development` as the assumed environment.\n\n    ' +
