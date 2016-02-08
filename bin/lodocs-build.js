@@ -38,7 +38,11 @@
       })
       .catch(function(err) {
         if (!options.quiet) {
-          cjsErr({verbose: options.verbose}, err);
+          if (options.verbose && err.stack) {
+            console.error(chalk.red(err.stack));
+          } else {
+            console.error(chalk.red(err.message));
+          }
         }
 
         process.exit(1);
