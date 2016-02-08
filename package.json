@@ -34,7 +34,7 @@
     "gulp": "^3.9.0",
     "lodash": "^4.2.1",
     "node-clean-exit": "^0.2.1",
-    "normalize.css": "^3.0.3",
+    "normalize-scss": "^4.0.3",
     "opn": "^4.0.0",
     "pluralize": "^1.2.1",
     "spork": "^0.3.1",
