@@ -5,7 +5,7 @@
   var program = require('commander');
 
   program
-      .version('0.6.0')
+      .version('0.6.1')
       .description('Description:\n\n    ' + 'Build, test & release the Lodash website.\n    ' +
           'Use `help [command]` for command-specific usage details.')
       .command('build', 'build the app for deployment')
