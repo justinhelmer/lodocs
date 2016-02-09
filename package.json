@@ -29,16 +29,10 @@
     "bluebird": "^3.2.2",
     "chalk": "^1.1.1",
     "commander": "^2.9.0",
-    "commander.js-error": "^1.1.0",
     "gh-release-manager": "^0.5.0",
     "gulp": "^3.9.0",
-    "lodash": "^4.2.1",
     "node-clean-exit": "^0.2.1",
-    "normalize-scss": "^4.0.3",
-    "opn": "^4.0.0",
-    "pluralize": "^1.2.1",
-    "spork": "^0.3.1",
-    "yamljs": "^0.2.4"
+    "normalize-scss": "^4.0.3"
   },
   "engines": {
     "node": ">=0.12"

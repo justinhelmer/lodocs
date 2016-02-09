@@ -46,10 +46,6 @@ Now, when running the `lodocs` command from the root of the `lodash.github.io` r
 
 ### lodocs-build(1)
 
-### lodocs-install(1)
-
-### lodocs-release(1)
-
 ### lodocs-serve(1)
 
 ## Contributing

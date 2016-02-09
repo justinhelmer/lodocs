@@ -6,15 +6,10 @@
 
   program
       .version('0.5.0')
-      .description('Description:\n\n    ' + 'Build & serve the application locally for different environments.\n\n    ' +
-          'If [env] is not supplied, the environment will be assumed based on\n    ' + 'the active node environment.\n\n    ' +
-          'If the $NODE_ENV environment variable does not exist,\n    ' + 'it will use `development` as the assumed environment.\n\n    ' +
-          'Everything but `development` and `production` will be rejected.\n\n    ' +
-          'There are also command-specific options. Use `help [command]` for details.')
-      .command('install', 'install dependencies necessary to use lodocs')
-      .command('build [env]', 'build the app for the correponding [env]')
-      .command('serve [port]', 'serve the app locally on the corresponding [port]')
-      .command('release', 'download releases, generate docs, test, deploy')
+      .description('Description:\n\n    ' + 'Build, test & release the Lodash website.\n    ' +
+          'Use `help [command]` for command-specific usage details.')
+      .command('build', 'build the app for deployment')
+      .command('serve', 'serve the app for debugging / development')
       .parse(process.argv);
 
   // @TODO is there a better way to do this?
